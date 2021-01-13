@@ -16,7 +16,7 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _soma__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./soma */ \"./src/soma.js\");\n\nconsole.log((0,_soma__WEBPACK_IMPORTED_MODULE_0__.soma)(1, 3));\n\n//# sourceURL=webpack://Frontend/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _soma__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./soma */ \"./src/soma.js\");\n\nconsole.log((0,_soma__WEBPACK_IMPORTED_MODULE_0__.soma)(1, 6));\n\n//# sourceURL=webpack://Frontend/./src/index.js?");
 
 /***/ }),
 
