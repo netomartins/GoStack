@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, StatusBar } from 'react-native';
+import { View,FlatList, Text, StyleSheet, StatusBar } from 'react-native';
 import api from './services/api';
 
 //Não possuem valor semantico (significado)
@@ -23,13 +23,15 @@ export default function App() {
     <>
       <StatusBar barStyle="light-content" backgroundColor="#7159c1" />
 
-      <View style={styles.container}>
-        {projects.map((project) => (
-          <Text style={styles.project} key={project.id}>
-            {project.title}
-          </Text>
-        ))}
-      </View>
+      <FlatList
+
+      style={styles.container}
+      data={projects}
+      keyExtrator={project => project.id}
+      renderItem={({item: project}) => (
+        <Text style={styles.project}>{project.title}</Text> 
+      )}
+      />
     </>
   );
 }
@@ -38,12 +40,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#7159c1',
-    justifyContent: 'center',
-    alignItems: 'center',
   },
 
   project: {
     color: '#FFF',
-    fontSize: 20,
+    fontSize: 80,
   },
 });
